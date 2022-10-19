@@ -1,0 +1,13 @@
+.k-input {
+  border: 1px solid var(--side);
+  border-radius: 4px;
+  padding: 5px 11px;
+  height: 30px;
+}
+.k-input:focus {
+  outline:none;
+  border: 1px solid var(--active);
+}
+.k-input::placeholder {
+  color: var(--prompt);
+}

@@ -1,0 +1,18 @@
+.k-button {
+  padding: 0 10px;
+  min-width: 100px;
+  height: 30px;
+  background: var(--main);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.k-button:hover {
+  background: var(--hover);
+  transition: .3s;
+}
+.k-button:active {
+  background: var(--active);
+  transform: scale(.99);
+}
