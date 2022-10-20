@@ -1,0 +1,9 @@
+.k-radio {
+  font-size: 14px;
+  color: #000000d9;
+  cursor: pointer;
+}
+.k-radio .k-radio-input {
+  margin-right: 4px;
+  cursor: pointer;
+}
