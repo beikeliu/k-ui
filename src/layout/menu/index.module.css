@@ -1,7 +1,7 @@
 .menu {
-  border-right: 1px solid rgba(0, 0, 0, .15);
-  height:calc(100vh - 50px);
-  overflow:auto;
+  border-right: 1px solid rgb(0 0 0 / 15%);
+  height: calc(100vh - 50px);
+  overflow: auto;
 }
 
 .menu .item {
@@ -10,11 +10,11 @@
   width: 200px;
   height: 40px;
   text-decoration: none;
-  color: rgba(0, 0, 0, .7);
+  color: rgb(0 0 0 / 70%);
 }
 
 .menu .actived {
-  transition: .3s;
-  background-color: rgb(230, 247, 255);
-  color: rgb(24, 144, 255);
+  transition: 0.3s;
+  background-color: rgb(230 247 255);
+  color: rgb(24 144 255);
 }

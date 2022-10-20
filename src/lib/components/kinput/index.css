@@ -4,10 +4,12 @@
   padding: 5px 11px;
   height: 30px;
 }
+
 .k-input:focus {
-  outline:none;
+  outline: none;
   border: 1px solid var(--active);
 }
+
 .k-input::placeholder {
   color: var(--prompt);
 }

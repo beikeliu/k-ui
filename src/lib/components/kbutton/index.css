@@ -8,11 +8,13 @@
   color: white;
   cursor: pointer;
 }
+
 .k-button:hover {
   background: var(--hover);
-  transition: .3s;
+  transition: 0.3s;
 }
+
 .k-button:active {
   background: var(--active);
-  transform: scale(.99);
+  transform: scale(0.99);
 }
