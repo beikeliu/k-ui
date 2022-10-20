@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint src/**/*.tsx --fix",
-    "stylelint": "stylelint src/**/*.css --fix"
+    "stylelint": "stylelint src/**/*.css --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,6 +31,7 @@
     "stylelint": "^14.14.0",
     "stylelint-config-standard": "^29.0.0",
     "typescript": "^4.8.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "husky": "^8.0.0"
   }
 }
