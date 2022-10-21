@@ -1,6 +1,8 @@
-import './index.css'
-import { Props } from './types'
+import "./index.css";
+import { Props } from "./types";
 
-export const KButton: React.FC<Props> = ({ children }: Props) => (<>
-  <button className='k-button'>{children}</button>
-</>)
+export const KButton: React.FC<Props> = ({ children }: Props) => (
+  <>
+    <button className="k-button">{children}</button>
+  </>
+);

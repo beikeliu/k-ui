@@ -1,12 +1,12 @@
-import { ChangeEventHandler } from "react"
+import { ChangeEventHandler } from "react";
 
 export interface Props {
-  children?: string
-  value: string
+  children?: string;
+  value: string;
 }
 
 export interface GroupProps {
-  children?: React.ReactElement[]
-  value: string
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  children?: React.ReactElement[];
+  value: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
