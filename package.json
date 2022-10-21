@@ -11,8 +11,8 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.tsx": "eslint",
-    "*.css": "stylelint"
+    "*.tsx": "eslint --fix",
+    "*.css": "stylelint --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
