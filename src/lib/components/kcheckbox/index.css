@@ -1,0 +1,12 @@
+.k-checkbox {
+  font-size: 14px;
+  color: #000000d9;
+  cursor: pointer;
+}
+
+.k-checkbox .k-checkbox-input {
+  margin: 0 4px 0 10px;
+  cursor: pointer;
+  position: relative;
+  top: 0.1em;
+}

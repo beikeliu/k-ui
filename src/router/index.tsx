@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { KButtonDoc } from "../docs/kbutton";
 import { KInputDoc } from "../docs/kinput";
 import { KRadioDoc } from "../docs/kradio";
+import { KCheckboxDoc } from "../docs/kcheckbox";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/radio",
         element: <KRadioDoc />,
+      },
+      {
+        path: "/checkbox",
+        element: <KCheckboxDoc />,
       },
     ],
   },
