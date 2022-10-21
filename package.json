@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "*": "prettier --write",
-    "*.tsx": "eslint --fix",
+    "*.{ts,tsx}": "eslint --fix",
     "*.css": "stylelint --fix"
   },
   "dependencies": {
