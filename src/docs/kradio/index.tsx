@@ -14,7 +14,7 @@ export const KRadioDoc: React.FC = () => {
         <KRadio value="3">C</KRadio>
         <KRadio value="4">D</KRadio>
       </KRadioGroup>
-      {value}
+      &nbsp;&nbsp;{value}
     </>
   );
 };

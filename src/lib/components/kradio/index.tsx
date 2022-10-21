@@ -25,9 +25,5 @@ export const KRadioGroup: React.FC<GroupProps> = ({
 }: GroupProps) => {
   checked = value;
   handleChange = onChange;
-  return (
-    <>
-      <section>{children}</section>
-    </>
-  );
+  return <>{children}</>;
 };
