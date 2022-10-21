@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.40.1
   '@vitejs/plugin-react': ^2.1.0
   eslint: ^8.0.1
+  eslint-config-prettier: ^8.5.0
   eslint-config-standard-with-typescript: ^23.0.0
   eslint-plugin-import: ^2.25.2
   eslint-plugin-n: ^15.0.0
@@ -14,10 +15,12 @@ specifiers:
   eslint-plugin-react: ^7.31.10
   husky: ^8.0.0
   lint-staged: ^13.0.3
+  prettier: ^2.7.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-router-dom: ^6.4.2
   stylelint: ^14.14.0
+  stylelint-config-prettier: ^9.0.3
   stylelint-config-standard: ^29.0.0
   typescript: ^4.8.4
   vite: ^3.1.0
@@ -34,6 +37,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   '@vitejs/plugin-react': 2.1.0_vite@3.1.8
   eslint: 8.25.0
+  eslint-config-prettier: 8.5.0_eslint@8.25.0
   eslint-config-standard-with-typescript: 23.0.0_rjacwz3fq4zv3euadsy2vxkwfa
   eslint-plugin-import: 2.26.0_vcunoyu347gmi72pwsm7mdvjca
   eslint-plugin-n: 15.3.0_eslint@8.25.0
@@ -41,7 +45,9 @@ devDependencies:
   eslint-plugin-react: 7.31.10_eslint@8.25.0
   husky: 8.0.1
   lint-staged: 13.0.3
+  prettier: 2.7.1
   stylelint: 14.14.0
+  stylelint-config-prettier: 9.0.3_stylelint@14.14.0
   stylelint-config-standard: 29.0.0_stylelint@14.14.0
   typescript: 4.8.4
   vite: 3.1.8
@@ -1324,6 +1330,15 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /eslint-config-prettier/8.5.0_eslint@8.25.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.25.0
     dev: true
 
   /eslint-config-standard-with-typescript/23.0.0_rjacwz3fq4zv3euadsy2vxkwfa:
@@ -2642,6 +2657,12 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -3039,6 +3060,16 @@ packages:
 
   /style-search/0.1.0:
     resolution: {integrity: sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=}
+    dev: true
+
+  /stylelint-config-prettier/9.0.3_stylelint@14.14.0:
+    resolution: {integrity: sha512-5n9gUDp/n5tTMCq1GLqSpA30w2sqWITSSEiAWQlpxkKGAUbjcemQ0nbkRvRUa0B1LgD3+hCvdL7B1eTxy1QHJg==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>=11.0.0'
+    dependencies:
+      stylelint: 14.14.0
     dev: true
 
   /stylelint-config-recommended/9.0.0_stylelint@14.14.0:
