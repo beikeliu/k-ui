@@ -9,10 +9,10 @@ export const KRadioDoc: React.FC = () => {
   return (
     <>
       <KRadioGroup onChange={onChange} value={value}>
-        <KRadio value={"1"}>A</KRadio>
-        <KRadio value={"2"}>B</KRadio>
-        <KRadio value={"3"}>C</KRadio>
-        <KRadio value={"4"}>D</KRadio>
+        <KRadio value="1">A</KRadio>
+        <KRadio value="2">B</KRadio>
+        <KRadio value="3">C</KRadio>
+        <KRadio value="4">D</KRadio>
       </KRadioGroup>
       {value}
     </>
