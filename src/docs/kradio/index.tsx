@@ -8,7 +8,7 @@ export const KRadioDoc: React.FC = () => {
     { label: "D", value: "4" },
   ];
   const [value, setValue] = useState<Props["value"]>("1");
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChange: Props["onChange"] = (e) => {
     setValue(e.target.id);
   };
   return (
