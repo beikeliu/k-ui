@@ -1,5 +1,7 @@
 import "./index.css";
-import { Props } from "./types";
+export interface Props {
+  children?: string;
+}
 
 export const KButton: React.FC<Props> = ({ children }: Props) => (
   <>
