@@ -1,28 +1,28 @@
 import { useState } from "react";
-import { KCheckbox, KCheckboxGroup } from "../../lib/components/kcheckbox";
-import { GroupProps } from "../../lib/components/kcheckbox/types";
+import { KCheckbox, Props } from "../../lib/components/kcheckbox";
 
 export const KCheckboxDoc: React.FC = () => {
-  const [value, setValue] = useState<GroupProps["value"]>(["1"]);
-  const onChange: GroupProps["onChange"] = (e) => {
+  const options: Props["options"] = [
+    { label: "A", value: "1" },
+    { label: "B", value: "2" },
+    { label: "C", value: "3" },
+    { label: "D", value: "4" },
+  ];
+  const [values, setValues] = useState<Props["values"]>(["1", "2"]);
+  const onChange: Props["onChange"] = (e) => {
     if (e.target.checked) {
-      setValue([...value, e.target.id]);
+      setValues([...values, e.target.id]);
     } else {
-      const index = value.indexOf(e.target.id);
-      const valueCopy = [...value];
+      const index = values.indexOf(e.target.id);
+      const valueCopy = [...values];
       valueCopy.splice(index, 1);
-      setValue(valueCopy);
+      setValues(valueCopy);
     }
   };
   return (
     <>
-      <KCheckboxGroup onChange={onChange} value={value}>
-        <KCheckbox value="1">A</KCheckbox>
-        <KCheckbox value="2">B</KCheckbox>
-        <KCheckbox value="3">C</KCheckbox>
-        <KCheckbox value="4">D</KCheckbox>
-      </KCheckboxGroup>
-      &nbsp;&nbsp;{value}
+      <KCheckbox onChange={onChange} values={values} options={options} />
+      &nbsp;&nbsp;{values}
     </>
   );
 };

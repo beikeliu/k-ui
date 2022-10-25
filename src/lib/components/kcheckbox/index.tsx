@@ -1,32 +1,32 @@
 import "./index.css";
-import { Props, GroupProps } from "./types";
+export interface Props {
+  values: string[];
+  options: Array<{
+    label: string;
+    value: string;
+  }>;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+}
 
-let checked: string[];
-let handleChange: GroupProps["onChange"];
-
-export const KCheckbox: React.FC<Props> = ({ children, value }: Props) => {
+export const KCheckbox: React.FC<Props> = ({
+  values,
+  options,
+  onChange,
+}: Props) => {
   return (
     <>
-      <label className="k-checkbox">
-        <input
-          type="checkbox"
-          className="k-checkbox-input"
-          id={value}
-          checked={checked.includes(value)}
-          onChange={handleChange}
-        />
-        {children}
-      </label>
+      {options.map((option) => (
+        <label className="k-checkbox" key={option.value}>
+          <input
+            type="checkbox"
+            className="k-checkbox-input"
+            id={option.value}
+            checked={values.includes(option.value)}
+            onChange={onChange}
+          />
+          {option.label}
+        </label>
+      ))}
     </>
   );
-};
-
-export const KCheckboxGroup: React.FC<GroupProps> = ({
-  children,
-  value,
-  onChange,
-}: GroupProps) => {
-  checked = value;
-  handleChange = onChange;
-  return <>{children}</>;
 };
