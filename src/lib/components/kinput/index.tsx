@@ -1,5 +1,12 @@
 import "./index.css";
-import { Props } from "./types";
+import { ChangeEventHandler } from "react";
+
+export interface Props {
+  placeholder?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  value?: string;
+}
+
 export const KInput: React.FC<Props> = ({
   placeholder,
   onChange,
