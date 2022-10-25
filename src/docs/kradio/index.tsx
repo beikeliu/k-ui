@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { KRadio, KRadioGroup } from "../../lib/components/kradio";
-import { GroupProps } from "../../lib/components/kradio/types";
+import { KRadio, Props } from "../../lib/components/kradio";
 export const KRadioDoc: React.FC = () => {
-  const [value, setValue] = useState<GroupProps["value"]>("1");
-  const onChange: GroupProps["onChange"] = (e) => {
+  const options: Props["options"] = [
+    { label: "A", value: "1" },
+    { label: "B", value: "2" },
+    { label: "C", value: "3" },
+    { label: "D", value: "4" },
+  ];
+  const [value, setValue] = useState<Props["value"]>("1");
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.id);
   };
   return (
     <>
-      <KRadioGroup onChange={onChange} value={value}>
-        <KRadio value="1">A</KRadio>
-        <KRadio value="2">B</KRadio>
-        <KRadio value="3">C</KRadio>
-        <KRadio value="4">D</KRadio>
-      </KRadioGroup>
+      <KRadio onChange={onChange} value={value} options={options} />
       &nbsp;&nbsp;{value}
     </>
   );

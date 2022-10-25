@@ -1,29 +1,30 @@
 import "./index.css";
-import { Props, GroupProps } from "./types";
+export interface Props {
+  value: string;
+  options: Array<{
+    label: string;
+    value: string;
+  }>;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+}
 
-let checked: string;
-let handleChange: GroupProps["onChange"];
-export const KRadio: React.FC<Props> = ({ children, value }: Props) => (
+export const KRadio: React.FC<Props> = ({
+  value,
+  options,
+  onChange,
+}: Props) => (
   <>
-    <label className="k-radio">
-      <input
-        type="radio"
-        className="k-radio-input"
-        id={value}
-        checked={checked === value}
-        onChange={handleChange}
-      />
-      {children}
-    </label>
+    {options.map((option) => (
+      <label className="k-radio" key={option.value}>
+        <input
+          type="radio"
+          className="k-radio-input"
+          id={option.value}
+          checked={option.value === value}
+          onChange={onChange}
+        />
+        {option.label}
+      </label>
+    ))}
   </>
 );
-
-export const KRadioGroup: React.FC<GroupProps> = ({
-  children,
-  value,
-  onChange,
-}: GroupProps) => {
-  checked = value;
-  handleChange = onChange;
-  return <>{children}</>;
-};
