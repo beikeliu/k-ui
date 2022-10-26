@@ -1,7 +1,9 @@
 .k-radio {
-  font-size: 14px;
+  font-size: 16px;
   color: #000000d9;
   cursor: pointer;
+  height: 26px;
+  padding: 5px 0;
 }
 
 .k-radio .k-radio-input {
@@ -9,4 +11,6 @@
   cursor: pointer;
   position: relative;
   top: 0.1em;
+  width: 16px;
+  height: 16px;
 }

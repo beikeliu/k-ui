@@ -1,7 +1,7 @@
 .k-button {
   padding: 0 10px;
-  min-width: 100px;
-  height: 30px;
+  min-width: 80px;
+  height: 26px;
   background: var(--main);
   border: 1px solid transparent;
   border-radius: 4px;
@@ -11,10 +11,9 @@
 
 .k-button:hover {
   background: var(--hover);
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .k-button:active {
   background: var(--active);
-  transform: scale(0.99);
 }

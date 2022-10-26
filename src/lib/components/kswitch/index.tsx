@@ -10,7 +10,7 @@ export const KSwitch: React.FC<Props> = ({ value, onClick }: Props) => {
   const [actived, setActived] = useState(false);
   return (
     <>
-      <div
+      <span
         className={`k-switch ${value ? "k-switch-on" : "k-switch-off"}`}
         onClick={onClick}
         onMouseDown={() => {
@@ -23,7 +23,7 @@ export const KSwitch: React.FC<Props> = ({ value, onClick }: Props) => {
         <span
           className={`k-switch-round ${actived ? "k-switch-actived" : ""}`}
         />
-      </div>
+      </span>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { App } from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import { ErrorElement } from "./Error";
+import { Test } from "./Test";
 
 import { KButtonDoc } from "../docs/kbutton";
 import { KInputDoc } from "../docs/kinput";
@@ -40,5 +41,9 @@ export const router = createBrowserRouter([
         element: <KSelectDoc />,
       },
     ],
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ]);

@@ -9,7 +9,7 @@ export const KSwitchDoc: React.FC = () => {
   return (
     <>
       <KSwitch value={value} onClick={onClick} />
-      {value.toString()}
+      &nbsp;&nbsp;{value.toString()}
     </>
   );
 };

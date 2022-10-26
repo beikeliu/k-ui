@@ -1,17 +1,19 @@
 .k-switch {
-  height: 22px;
-  width: 44px;
+  height: 18px;
+  width: 36px;
   padding: 2px;
   border-radius: 100px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
+  display: inline-block;
+  transform: translateY(4px);
 }
 
 .k-switch-round {
   content: "";
   background: white;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   border-radius: 100%;
   display: block;
 }
@@ -24,21 +26,22 @@
   background: var(--disable);
 }
 
-.k-switch-on .k-switch-round {
-  transition: 0.3s;
-}
-
-.k-switch-on .k-switch-round.k-switch-actived {
-  transition: 0.3s;
-  transform: translateX(20%);
-}
-
 .k-switch-off .k-switch-round {
-  transition: 0.3s;
-  transform: translateX(120%);
+  transition: 0.25s;
+  transform: translateX(1px);
 }
 
 .k-switch-off .k-switch-round.k-switch-actived {
-  transition: 0.3s;
-  transform: translateX(100%);
+  transition: 0.25s;
+  transform: translateX(2px);
+}
+
+.k-switch-on .k-switch-round {
+  transition: 0.25s;
+  transform: translateX(18px);
+}
+
+.k-switch-on .k-switch-round.k-switch-actived {
+  transition: 0.25s;
+  transform: translateX(16px);
 }
