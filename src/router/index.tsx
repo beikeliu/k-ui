@@ -6,10 +6,17 @@ import { KRadioDoc } from "../docs/kradio";
 import { KCheckboxDoc } from "../docs/kcheckbox";
 import { KSwitchDoc } from "../docs/kswitch";
 
+export const ErrorElement: React.FC = () => (
+  <>
+    <div style={{ color: "red" }}>此页面无法访问，请检查网址是否正确。</div>
+  </>
+);
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorElement />,
     children: [
       {
         path: "/button",
