@@ -1,0 +1,44 @@
+.k-switch {
+  height: 22px;
+  width: 44px;
+  padding: 2px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.k-switch-round {
+  content: "";
+  background: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: block;
+}
+
+.k-switch-on {
+  background: var(--main);
+}
+
+.k-switch-off {
+  background: var(--disable);
+}
+
+.k-switch-on .k-switch-round {
+  transition: 0.3s;
+}
+
+.k-switch-on .k-switch-round.k-switch-actived {
+  transition: 0.3s;
+  transform: translateX(20%);
+}
+
+.k-switch-off .k-switch-round {
+  transition: 0.3s;
+  transform: translateX(120%);
+}
+
+.k-switch-off .k-switch-round.k-switch-actived {
+  transition: 0.3s;
+  transform: translateX(100%);
+}

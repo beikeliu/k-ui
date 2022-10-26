@@ -4,6 +4,7 @@ import { KButtonDoc } from "../docs/kbutton";
 import { KInputDoc } from "../docs/kinput";
 import { KRadioDoc } from "../docs/kradio";
 import { KCheckboxDoc } from "../docs/kcheckbox";
+import { KSwitchDoc } from "../docs/kswitch";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/checkbox",
         element: <KCheckboxDoc />,
+      },
+      {
+        path: "/switch",
+        element: <KSwitchDoc />,
       },
     ],
   },
