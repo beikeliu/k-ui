@@ -1,17 +1,13 @@
 import { App } from "../App";
 import { createBrowserRouter } from "react-router-dom";
+import { ErrorElement } from "./Error";
+
 import { KButtonDoc } from "../docs/kbutton";
 import { KInputDoc } from "../docs/kinput";
 import { KRadioDoc } from "../docs/kradio";
 import { KCheckboxDoc } from "../docs/kcheckbox";
 import { KSwitchDoc } from "../docs/kswitch";
 import { KSelectDoc } from "../docs/kselect";
-
-export const ErrorElement: React.FC = () => (
-  <>
-    <div style={{ color: "red" }}>此页面无法访问，请检查网址是否正确。</div>
-  </>
-);
 
 export const router = createBrowserRouter([
   {
