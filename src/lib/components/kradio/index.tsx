@@ -14,16 +14,16 @@ export const KRadio: React.FC<Props> = ({
   onChange,
 }: Props) => (
   <>
-    {options.map((option) => (
-      <label className="k-radio" key={option.value}>
+    {options.map(({ label, value: v }) => (
+      <label className="k-radio" key={v}>
         <input
           type="radio"
           className="k-radio-input"
-          id={option.value}
-          checked={option.value === value}
+          id={v}
+          checked={v === value}
           onChange={onChange}
         />
-        {option.label}
+        {label}
       </label>
     ))}
   </>

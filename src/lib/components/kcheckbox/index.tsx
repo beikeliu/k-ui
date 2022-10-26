@@ -15,16 +15,16 @@ export const KCheckbox: React.FC<Props> = ({
 }: Props) => {
   return (
     <>
-      {options.map((option) => (
-        <label className="k-checkbox" key={option.value}>
+      {options.map(({ label, value }) => (
+        <label className="k-checkbox" key={value}>
           <input
             type="checkbox"
             className="k-checkbox-input"
-            id={option.value}
-            checked={values.includes(option.value)}
+            id={value}
+            checked={values.includes(value)}
             onChange={onChange}
           />
-          {option.label}
+          {label}
         </label>
       ))}
     </>
