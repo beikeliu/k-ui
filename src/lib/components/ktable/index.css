@@ -1,0 +1,9 @@
+.k-table {
+  border: 1px solid #000;
+  border-spacing: 0;
+}
+
+.k-table th,
+td {
+  border: 1px solid #000;
+}

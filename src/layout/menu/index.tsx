@@ -9,6 +9,7 @@ export const Menu: React.FC = () => {
     "checkbox",
     "switch",
     "select",
+    "table",
   ];
   const location = useLocation();
   return (

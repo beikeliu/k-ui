@@ -9,6 +9,7 @@ import { KRadioDoc } from "../docs/kradio";
 import { KCheckboxDoc } from "../docs/kcheckbox";
 import { KSwitchDoc } from "../docs/kswitch";
 import { KSelectDoc } from "../docs/kselect";
+import { KTableDoc } from "../docs/ktable";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/select",
         element: <KSelectDoc />,
+      },
+      {
+        path: "/table",
+        element: <KTableDoc />,
       },
     ],
   },
