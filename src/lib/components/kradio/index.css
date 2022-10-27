@@ -9,8 +9,7 @@
 .k-radio .k-radio-input {
   margin: 0 4px 0 10px;
   cursor: pointer;
-  position: relative;
-  top: 0.1em;
+  transform: translateY(2px);
   width: 16px;
   height: 16px;
 }

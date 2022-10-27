@@ -6,7 +6,8 @@
   cursor: pointer;
   transition: 0.25s;
   display: inline-block;
-  transform: translateY(4px);
+  transform: translateY(2px);
+  border: 0;
 }
 
 .k-switch-round {
