@@ -8,7 +8,7 @@ export const KSelectDoc: React.FC = () => {
     { label: "C", value: "3" },
     { label: "D", value: "4" },
   ];
-  const [value, setValue] = useState<Props["value"]>("1");
+  const [value, setValue] = useState<Props["value"]>("2");
   const onChange: Props["onChange"] = (e) => {
     setValue(e.target.value);
   };

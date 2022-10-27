@@ -1,3 +1,5 @@
+import "./index.css";
+
 export interface Props {
   value: string;
   onChange: React.ChangeEventHandler<HTMLSelectElement>;
@@ -13,9 +15,9 @@ export const KSelect: React.FC<Props> = ({
   options,
 }: Props) => (
   <>
-    <select onChange={onChange}>
+    <select onChange={onChange} className="k-select" defaultValue={value}>
       {options.map(({ label, value: v }) => (
-        <option value={v} selected={v === value} key={v}>
+        <option value={v} key={v}>
           {label}
         </option>
       ))}

@@ -1,0 +1,10 @@
+.k-select {
+  width: 120px;
+  height: 26px;
+  border: 1px solid var(--side);
+  border-radius: 4px;
+}
+
+.k-select:focus-visible {
+  outline: none;
+}
