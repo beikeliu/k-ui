@@ -4,7 +4,6 @@ export interface Props {
   rowKey: string | number;
   data: Array<Record<string, any>>;
   option: Array<{
-    width: number;
     in: string;
     title: string;
   }>;
