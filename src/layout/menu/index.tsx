@@ -1,20 +1,12 @@
 import styles from "./index.module.css";
 import { Link, useLocation } from "react-router-dom";
+import { menuOptions } from "../../router";
 
 export const Menu: React.FC = () => {
-  const menuItems = [
-    "button",
-    "input",
-    "radio",
-    "checkbox",
-    "switch",
-    "select",
-    "table",
-  ];
   const location = useLocation();
   return (
     <ul className={styles.menu}>
-      {menuItems.map((item) => (
+      {Object.keys(menuOptions).map((item) => (
         <Link
           key={item}
           className={`${

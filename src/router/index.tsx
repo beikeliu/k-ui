@@ -1,5 +1,5 @@
 import { App } from "../App";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { ErrorElement } from "./Error";
 import { Test } from "./Test";
 
@@ -11,41 +11,29 @@ import { KSwitchDoc } from "../docs/kswitch";
 import { KSelectDoc } from "../docs/kselect";
 import { KTableDoc } from "../docs/ktable";
 
+export const menuOptions = {
+  button: <KButtonDoc />,
+  input: <KInputDoc />,
+  radio: <KRadioDoc />,
+  checkbox: <KCheckboxDoc />,
+  switch: <KSwitchDoc />,
+  select: <KSelectDoc />,
+  table: <KTableDoc />,
+};
+const getRootChildren = (): RouteObject[] =>
+  (
+    Object.keys(menuOptions) as Array<keyof typeof menuOptions>
+  ).map<RouteObject>((item) => ({
+    path: item,
+    element: menuOptions[item],
+  }));
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorElement />,
-    children: [
-      {
-        path: "/button",
-        element: <KButtonDoc />,
-      },
-      {
-        path: "/input",
-        element: <KInputDoc />,
-      },
-      {
-        path: "/radio",
-        element: <KRadioDoc />,
-      },
-      {
-        path: "/checkbox",
-        element: <KCheckboxDoc />,
-      },
-      {
-        path: "/switch",
-        element: <KSwitchDoc />,
-      },
-      {
-        path: "/select",
-        element: <KSelectDoc />,
-      },
-      {
-        path: "/table",
-        element: <KTableDoc />,
-      },
-    ],
+    children: getRootChildren(),
   },
   {
     path: "/test",
