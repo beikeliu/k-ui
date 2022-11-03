@@ -1,14 +1,15 @@
+import { ReactNode } from "react";
 import "./index.css";
 
 export interface Props {
   rowKey: string | number;
-  data: Array<Record<string, any>>;
+  data: Array<Record<string, ReactNode>>;
   option: Array<{
     in?: string;
     title: string;
     render?: (
-      text: string | null,
-      record: Record<string, any>,
+      text: ReactNode | null,
+      record: Record<string, ReactNode>,
       index: number
     ) => JSX.Element;
   }>;
@@ -27,7 +28,7 @@ export const KTable: React.FC<Props> = ({ rowKey, data, option }: Props) => {
         </thead>
         <tbody>
           {data.map((dt, index) => (
-            <tr key={dt[rowKey]}>
+            <tr key={dt[rowKey] as React.Key}>
               {option.map((op) => (
                 <td key={op.title}>
                   {op.render
