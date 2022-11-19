@@ -11,9 +11,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*": "prettier --write",
-    "*.{ts,tsx}": "eslint --fix",
-    "*.css": "stylelint --fix"
+    "src/**/*.{ts,tsx,css}": "prettier --write",
+    "src/**/*.{ts,tsx}": "eslint --fix",
+    "src/**/*.css": "stylelint --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
