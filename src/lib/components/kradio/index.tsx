@@ -23,7 +23,9 @@ export const KRadio: React.FC<Props> = ({
           checked={v === value}
           onChange={onChange}
         />
-        {label}
+        {/* input由于各浏览器样式实现不同,使用span重做样式 */}
+        <span className={v === value ? "k-radio-actived" : "k-radio-span"} />
+        <span className="k-radio-lable">{label}</span>
       </label>
     ))}
   </>

@@ -1,15 +1,60 @@
 .k-radio {
+  display: inline-block;
   font-size: 16px;
+  line-height: 16px;
   color: #000000d9;
   cursor: pointer;
   height: 26px;
   padding: 5px 0;
+  width: 42px;
+  position: relative;
 }
 
 .k-radio .k-radio-input {
-  margin: 0 4px 0 10px;
+  position: absolute;
   cursor: pointer;
-  transform: translateY(2px);
   width: 16px;
   height: 16px;
+  opacity: 0;
+}
+
+.k-radio .k-radio-span {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(0 0 0 / 30%);
+  border-radius: 50%;
+}
+
+.k-radio .k-radio-span:hover {
+  border: 1px solid var(--hover);
+  transition: 0.25s;
+}
+
+.k-radio .k-radio-actived {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--main);
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.k-radio .k-radio-actived::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  background-color: var(--main);
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.k-radio .k-radio-lable {
+  display: inline-block;
+  margin-left: 20px;
 }
