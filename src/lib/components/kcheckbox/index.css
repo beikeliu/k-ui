@@ -1,15 +1,60 @@
 .k-checkbox {
+  display: inline-block;
   font-size: 16px;
+  line-height: 16px;
   color: #000000d9;
   cursor: pointer;
   height: 26px;
   padding: 5px 0;
+  width: 42px;
+  position: relative;
 }
 
 .k-checkbox .k-checkbox-input {
-  margin: 0 4px 0 10px;
+  position: absolute;
   cursor: pointer;
-  transform: translateY(2px);
+  opacity: 0;
   width: 16px;
   height: 16px;
+}
+
+.k-checkbox .k-checkbox-span {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(0 0 0 / 30%);
+  border-radius: 4px;
+}
+
+.k-checkbox .k-checkbox-span:hover {
+  border: 1px solid var(--hover);
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.k-checkbox .k-checkbox-actived {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--main);
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.k-checkbox .k-checkbox-actived::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg) translate(2px, -4px);
+  transition: 0.25s;
+}
+
+.k-checkbox .k-checkbox-lable {
+  display: inline-block;
+  margin-left: 20px;
 }

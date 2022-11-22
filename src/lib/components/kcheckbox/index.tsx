@@ -24,7 +24,13 @@ export const KCheckbox: React.FC<Props> = ({
             checked={values.includes(value)}
             onChange={onChange}
           />
-          {label}
+          {/* input由于各浏览器样式实现不同,使用span重做样式 */}
+          <span
+            className={
+              values.includes(value) ? "k-checkbox-actived" : "k-checkbox-span"
+            }
+          />
+          <span className="k-checkbox-lable">{label}</span>
         </label>
       ))}
     </>
