@@ -27,7 +27,7 @@
   border-radius: 4px;
 }
 
-.k-checkbox .k-checkbox-span:hover {
+.k-checkbox:hover .k-checkbox-span {
   border: 1px solid var(--hover);
   border-radius: 4px;
   transition: 0.25s;

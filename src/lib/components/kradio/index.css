@@ -27,7 +27,7 @@
   border-radius: 50%;
 }
 
-.k-radio .k-radio-span:hover {
+.k-radio:hover .k-radio-span {
   border: 1px solid var(--hover);
   transition: 0.25s;
 }
