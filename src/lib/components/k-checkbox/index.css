@@ -50,7 +50,7 @@
   height: 9px;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
-  transform: rotate(45deg) translate(2px, -4px);
+  transform: rotate(45deg) translate(2px, -6px);
   transition: 0.25s;
 }
 

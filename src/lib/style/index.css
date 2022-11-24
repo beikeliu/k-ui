@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,4 +36,23 @@ body {
     "Segoe UI Symbol",
     "Noto Color Emoji";
   font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0 0 0 / 10%);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0 0 0 / 20%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(0 0 0 / 10%);
 }

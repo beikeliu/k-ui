@@ -1,11 +1,10 @@
 import { Head } from "./layout/head";
 import { Menu } from "./layout/menu";
 import { Content } from "./layout/content";
-import "./lib/style/index.css";
 export const App: React.FC = () => (
   <>
     <Head />
-    <div className="flex">
+    <div style={{ display: "flex" }}>
       <Menu />
       <Content />
     </div>
