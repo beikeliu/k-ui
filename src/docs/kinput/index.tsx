@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { KInput, Props } from "../../lib/components/kinput";
+import { KInput, Props } from "../../lib/components/k-input";
 export const KInputDoc: React.FC = () => {
   const [value, setValue] = useState<Props["value"]>("");
   const handleChange: Props["onChange"] = (e) => {

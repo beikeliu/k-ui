@@ -7,22 +7,20 @@ export interface Props {
 }
 
 export const KSwitch: React.FC<Props> = ({ value, onClick }: Props) => {
-  const [actived, setActived] = useState(false);
+  const [active, setActive] = useState(false);
   return (
     <>
       <button
         className={`k-switch ${value ? "k-switch-on" : "k-switch-off"}`}
         onClick={onClick}
         onMouseDown={() => {
-          setActived(true);
+          setActive(true);
         }}
         onMouseUp={() => {
-          setActived(false);
+          setActive(false);
         }}
       >
-        <span
-          className={`k-switch-round ${actived ? "k-switch-actived" : ""}`}
-        />
+        <span className={`k-switch-round ${active ? "k-switch-active" : ""}`} />
       </button>
     </>
   );

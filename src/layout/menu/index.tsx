@@ -11,7 +11,7 @@ export const Menu: React.FC = () => {
           key={item}
           className={`${
             location.pathname.slice(1, location.pathname.length) === item
-              ? styles.actived
+              ? styles.active
               : ""
           } ${styles.item}`}
           to={item}

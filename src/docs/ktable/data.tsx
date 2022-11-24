@@ -1,4 +1,4 @@
-import { Props } from "../../lib/components/ktable";
+import { Props } from "../../lib/components/k-table";
 
 export const rowKey: Props["rowKey"] = "id";
 

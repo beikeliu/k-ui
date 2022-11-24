@@ -14,7 +14,7 @@ export interface Props {
 }
 
 export const KSelect: React.FC<Props> = ({
-  value: selectd,
+  value: selected,
   handleClick,
   options,
 }: Props) => {
@@ -33,7 +33,7 @@ export const KSelect: React.FC<Props> = ({
             <div
               key={label}
               className={`k-select-list-item ${
-                value === selectd ? "k-select-list-active" : ""
+                value === selected ? "k-select-list-active" : ""
               }`}
               onClick={(e) => {
                 handleClick(e, value);

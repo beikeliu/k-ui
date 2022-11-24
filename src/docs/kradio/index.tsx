@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { KRadio, Props } from "../../lib/components/kradio";
+import { KRadio, Props } from "../../lib/components/k-radio";
 export const KRadioDoc: React.FC = () => {
   const options: Props["options"] = [
     { label: "A", value: "1" },

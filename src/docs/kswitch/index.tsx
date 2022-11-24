@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { KSwitch, Props } from "../../lib/components/kswitch";
+import { KSwitch, Props } from "../../lib/components/k-switch";
 
 export const KSwitchDoc: React.FC = () => {
   const [value, setValue] = useState<Props["value"]>(false);

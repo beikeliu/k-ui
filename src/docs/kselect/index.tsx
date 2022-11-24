@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { KSelect, Props } from "../../lib/components/kselect";
+import { KSelect, Props } from "../../lib/components/k-select";
 
 export const KSelectDoc: React.FC = () => {
   const options: Props["options"] = [

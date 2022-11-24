@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { KCheckbox, Props } from "../../lib/components/kcheckbox";
+import { KCheckbox, Props } from "../../lib/components/k-checkbox";
 
 export const KCheckboxDoc: React.FC = () => {
   const options: Props["options"] = [

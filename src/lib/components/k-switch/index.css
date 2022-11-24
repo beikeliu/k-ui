@@ -32,7 +32,7 @@
   transform: translateX(1px);
 }
 
-.k-switch-off .k-switch-round.k-switch-actived {
+.k-switch-off .k-switch-round.k-switch-active {
   transition: 0.25s;
   transform: translateX(2px);
 }
@@ -42,7 +42,7 @@
   transform: translateX(18px);
 }
 
-.k-switch-on .k-switch-round.k-switch-actived {
+.k-switch-on .k-switch-round.k-switch-active {
   transition: 0.25s;
   transform: translateX(16px);
 }

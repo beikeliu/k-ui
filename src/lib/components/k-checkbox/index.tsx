@@ -27,10 +27,10 @@ export const KCheckbox: React.FC<Props> = ({
           {/* input由于各浏览器样式实现不同,使用span重做样式 */}
           <span
             className={
-              values.includes(value) ? "k-checkbox-actived" : "k-checkbox-span"
+              values.includes(value) ? "k-checkbox-active" : "k-checkbox-span"
             }
           />
-          <span className="k-checkbox-lable">{label}</span>
+          <span className="k-checkbox-label">{label}</span>
         </label>
       ))}
     </>

@@ -13,7 +13,7 @@
   color: rgb(0 0 0 / 70%);
 }
 
-.menu .actived {
+.menu .active {
   transition: 0.25s;
   background-color: rgb(230 247 255);
   color: rgb(24 144 255);

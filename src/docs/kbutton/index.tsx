@@ -1,4 +1,4 @@
-import { KButton } from "../../lib/components/kbutton";
+import { KButton } from "../../lib/components/k-button";
 
 export const KButtonDoc: React.FC = () => (
   <>

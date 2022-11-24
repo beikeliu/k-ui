@@ -1,4 +1,4 @@
-import { KTable } from "../../lib/components/ktable";
+import { KTable } from "../../lib/components/k-table";
 import { columns, dataSource, rowKey } from "./data";
 
 export const KTableDoc: React.FC = () => (
