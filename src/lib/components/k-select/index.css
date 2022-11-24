@@ -1,3 +1,7 @@
+.k-select {
+  display: inline-block;
+}
+
 .k-select-box {
   width: 140px;
   height: 26px;

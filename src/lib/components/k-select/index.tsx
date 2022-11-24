@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./index.css";
 
 export interface Props {
@@ -18,9 +18,19 @@ export const KSelect: React.FC<Props> = ({
   handleClick,
   options,
 }: Props) => {
+  const kSelect = useRef(null);
   const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleClickOut: (this: Document, ev: MouseEvent) => void = (e) => {
+      (e.target as Node).contains(kSelect.current) && setVisible(false);
+    };
+    document.addEventListener("click", handleClickOut);
+    return () => {
+      document.removeEventListener("click", handleClickOut);
+    };
+  }, []);
   return (
-    <>
+    <div className="k-select" ref={kSelect}>
       <div
         className="k-select-box"
         onClick={() => {
@@ -45,6 +55,6 @@ export const KSelect: React.FC<Props> = ({
           ))}
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
