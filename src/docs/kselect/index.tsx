@@ -9,13 +9,14 @@ export const KSelectDoc: React.FC = () => {
     { label: "D", value: "4" },
   ];
   const [value, setValue] = useState<Props["value"]>("2");
-  const onChange: Props["onChange"] = (e) => {
-    setValue(e.target.value);
+  const handleClick: Props["handleClick"] = (e, value) => {
+    setValue(value);
   };
   return (
     <>
-      <KSelect value={value} onChange={onChange} options={options} />
+      <KSelect value={value} handleClick={handleClick} options={options} />
       {value}
+      <div>占位测试</div>
     </>
   );
 };

@@ -1,10 +1,33 @@
-.k-select {
-  width: 120px;
+.k-select-box {
+  width: 140px;
   height: 26px;
   border: 1px solid var(--side);
   border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
 }
 
-.k-select:focus-visible {
-  outline: none;
+.k-select-list {
+  position: absolute;
+  width: 140px;
+  height: 280px;
+  border: 1px solid var(--side);
+  border-radius: 4px;
+  background: white;
+  padding: 5px 0;
+}
+
+.k-select-list-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.k-select-list-item:hover {
+  background: #f5f5f5;
+}
+
+.k-select-list-active,
+.k-select-list-active:hover {
+  background: #bae7ff;
 }

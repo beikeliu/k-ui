@@ -1,8 +1,12 @@
+import { useState } from "react";
 import "./index.css";
 
 export interface Props {
   value: string;
-  onChange: React.ChangeEventHandler<HTMLSelectElement>;
+  handleClick: (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    value: string
+  ) => void;
   options: Array<{
     label: string;
     value: string;
@@ -10,17 +14,37 @@ export interface Props {
 }
 
 export const KSelect: React.FC<Props> = ({
-  value,
-  onChange,
+  value: selectd,
+  handleClick,
   options,
-}: Props) => (
-  <>
-    <select onChange={onChange} className="k-select" defaultValue={value}>
-      {options.map(({ label, value: v }) => (
-        <option value={v} key={v}>
-          {label}
-        </option>
-      ))}
-    </select>
-  </>
-);
+}: Props) => {
+  const [visible, setVisible] = useState(false);
+  return (
+    <>
+      <div
+        className="k-select-box"
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      ></div>
+      {visible ? (
+        <div className="k-select-list">
+          {options.map(({ label, value }) => (
+            <div
+              key={label}
+              className={`k-select-list-item ${
+                value === selectd ? "k-select-list-active" : ""
+              }`}
+              onClick={(e) => {
+                handleClick(e, value);
+                setVisible(false);
+              }}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </>
+  );
+};
