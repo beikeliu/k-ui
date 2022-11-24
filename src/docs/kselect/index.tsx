@@ -7,6 +7,11 @@ export const KSelectDoc: React.FC = () => {
     { label: "B", value: "2" },
     { label: "C", value: "3" },
     { label: "D", value: "4" },
+    { label: "EEEEEEEEEEEEEEEEE", value: "5" },
+    { label: "F", value: "6" },
+    { label: "G", value: "7" },
+    { label: "H", value: "8" },
+    { label: "I", value: "9" },
   ];
   const [value, setValue] = useState<Props["value"]>("2");
   const handleClick: Props["handleClick"] = (e, value) => {
@@ -15,7 +20,7 @@ export const KSelectDoc: React.FC = () => {
   return (
     <>
       <KSelect value={value} handleClick={handleClick} options={options} />
-      {value}
+      <span>&nbsp;&nbsp;{value}</span>
       <div>占位测试</div>
     </>
   );

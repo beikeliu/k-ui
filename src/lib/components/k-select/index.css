@@ -1,5 +1,19 @@
+@keyframes slide-down {
+  from {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+
+  to {
+    max-height: 280px;
+    overflow-y: auto;
+  }
+}
+
 .k-select {
   display: inline-block;
+  height: 26px;
+  transform: translateY(5px);
 }
 
 .k-select-box {
@@ -15,11 +29,13 @@
 .k-select-list {
   position: absolute;
   width: 140px;
-  height: 280px;
   border: 1px solid var(--side);
   border-radius: 4px;
   background: white;
   padding: 5px 0;
+  overflow-y: auto;
+  max-height: 280px;
+  animation: slide-down 0.25s;
 }
 
 .k-select-list-item {
