@@ -10,6 +10,7 @@ import { KCheckboxDoc } from "../docs/kcheckbox";
 import { KSwitchDoc } from "../docs/kswitch";
 import { KSelectDoc } from "../docs/kselect";
 import { KTableDoc } from "../docs/ktable";
+import { KMessage } from "../docs/kmessage";
 
 export const menuOptions = {
   button: <KButtonDoc />,
@@ -19,6 +20,7 @@ export const menuOptions = {
   switch: <KSwitchDoc />,
   select: <KSelectDoc />,
   table: <KTableDoc />,
+  message: <KMessage />,
 };
 const getRootChildren = (): RouteObject[] =>
   (
