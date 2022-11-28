@@ -1,16 +1,15 @@
 import { App } from "../App";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { ErrorElement } from "./Error";
-import { Test } from "./Test";
 
-import { KButtonDoc } from "../docs/kbutton";
-import { KInputDoc } from "../docs/kinput";
-import { KRadioDoc } from "../docs/kradio";
-import { KCheckboxDoc } from "../docs/kcheckbox";
-import { KSwitchDoc } from "../docs/kswitch";
-import { KSelectDoc } from "../docs/kselect";
-import { KTableDoc } from "../docs/ktable";
-import { KMessage } from "../docs/kmessage";
+import { KButtonDoc } from "../docs/k-button";
+import { KInputDoc } from "../docs/k-input";
+import { KRadioDoc } from "../docs/k-radio";
+import { KCheckboxDoc } from "../docs/k-checkbox";
+import { KSwitchDoc } from "../docs/k-switch";
+import { KSelectDoc } from "../docs/k-select";
+import { KTableDoc } from "../docs/k-table";
+import { KMessage } from "../docs/k-message";
 
 export const menuOptions = {
   button: <KButtonDoc />,
@@ -36,9 +35,5 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorElement />,
     children: getRootChildren(),
-  },
-  {
-    path: "/test",
-    element: <Test />,
   },
 ]);
