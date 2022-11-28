@@ -14,11 +14,16 @@ const KMessage: React.FC<Props> = (props: Props) => {
   );
 };
 
-const div = document.createElement("div");
-document.body.appendChild(div);
+let div: HTMLDivElement;
 
 const domRender = (content: Props): void => {
+  div = document.createElement("div");
+  document.body.appendChild(div);
   ReactDOM.createRoot(div).render(<KMessage {...content} />);
+};
+
+const domRemove = (): void => {
+  document.body.removeChild(div);
 };
 
 const message: Message = {
@@ -32,6 +37,9 @@ const types: Type[] = ["success", "error", "warn", "info"];
 types.forEach((type) => {
   message[type] = (content: string) => {
     domRender({ content });
+    setTimeout(() => {
+      domRemove();
+    }, 3 * 1000);
   };
 });
 
