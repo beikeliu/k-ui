@@ -4,7 +4,7 @@ interface Props {
   content: string;
 }
 type Type = "success" | "error" | "warn" | "info";
-type Message = Record<Type, any>;
+type Message = Record<Type, (content: string) => void>;
 
 const KMessage: React.FC<Props> = (props: Props) => {
   return (
