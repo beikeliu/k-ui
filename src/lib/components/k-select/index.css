@@ -13,17 +13,18 @@
 .k-select {
   display: inline-block;
   height: 26px;
-  transform: translateY(5px);
 }
 
 .k-select-box {
   width: 140px;
   height: 26px;
+  line-height: 26px;
   border: 1px solid var(--side);
   border-radius: 4px;
   display: inline-block;
   position: relative;
   cursor: pointer;
+  padding-left: 4px;
 }
 
 .k-select-list {

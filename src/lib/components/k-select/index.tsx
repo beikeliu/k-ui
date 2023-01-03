@@ -36,7 +36,9 @@ export const KSelect: React.FC<Props> = ({
         onClick={() => {
           setVisible(!visible);
         }}
-      ></div>
+      >
+        {options.filter(({ value }) => value === selected)[0].label}
+      </div>
       {visible ? (
         <div className="k-select-list">
           {options.map(({ label, value }) => (
