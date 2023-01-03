@@ -1,44 +1,64 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import successIcon from "../../icons/success.svg";
+import errorIcon from "../../icons/error.svg";
+import warningIcon from "../../icons/warning.svg";
+import { ReactElement } from "react";
 interface Props {
   content: string;
+  type: Type;
 }
-type Type = "success" | "error" | "warn" | "info";
+type Type = "success" | "error" | "warning";
 type Message = Record<Type, (content: string) => void>;
+
+const icons = {
+  success: successIcon,
+  error: errorIcon,
+  warning: warningIcon,
+};
 
 const KMessage: React.FC<Props> = (props: Props) => {
   return (
     <>
-      <div className="k-message">{props.content}</div>
+      <div className="k-message">
+        <img className="k-message-icon" src={icons[props.type]} />
+        {props.content}
+      </div>
     </>
   );
 };
 
-let div: HTMLDivElement;
+class DomRender {
+  div: HTMLDivElement;
+  comp: ReactElement;
+  constructor(comp: ReactElement) {
+    this.div = document.createElement("div");
+    document.body.appendChild(this.div);
+    this.comp = comp;
+  }
 
-const domRender = (content: Props): void => {
-  div = document.createElement("div");
-  document.body.appendChild(div);
-  ReactDOM.createRoot(div).render(<KMessage {...content} />);
-};
+  render(): void {
+    ReactDOM.createRoot(this.div).render(this.comp);
+  }
 
-const domRemove = (): void => {
-  document.body.removeChild(div);
-};
+  remove(): void {
+    this.div && document.body.removeChild(this.div);
+  }
+}
 
 const message: Message = {
   success: () => {},
   error: () => {},
-  warn: () => {},
-  info: () => {},
+  warning: () => {},
 };
-const types: Type[] = ["success", "error", "warn", "info"];
+const types: Type[] = ["success", "error", "warning"];
 
 types.forEach((type) => {
   message[type] = (content: string) => {
-    domRender({ content });
+    const render = new DomRender(<KMessage content={content} type={type} />);
+    render.render();
     setTimeout(() => {
-      domRemove();
+      render.remove();
     }, 3 * 1000);
   };
 });
