@@ -1,7 +1,7 @@
 import { KButton } from "../../lib/components/k-button";
 import { message } from "../../lib/components/k-message";
 
-export const KMessage: React.FC = () => {
+export const KMessageDoc: React.FC = () => {
   const openSuccess = (): void => {
     message.success("恭喜你，请求成功！");
   };
