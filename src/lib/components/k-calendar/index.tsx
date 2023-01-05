@@ -1,8 +1,13 @@
 import "./index.css";
 import { Calendar } from "./Calendar";
-export const KCalendar: React.FC = () => {
-  const calendar = new Calendar();
+import * as dayjs from "dayjs";
+export interface Props {
+  day?: dayjs.Dayjs;
+}
+export const KCalendar: React.FC<Props> = (props: Props) => {
+  const calendar = new Calendar(props.day);
   const items = calendar.getItems();
+  console.log(items);
   return (
     <>
       <table className="k-calendar">
@@ -15,9 +20,11 @@ export const KCalendar: React.FC = () => {
         </thead>
         <tbody>
           {items.map((i) => (
-            <tr key={i[0] + i[i.length - 1]}>
+            <tr key={i[0].key}>
               {i.map((j) => (
-                <td key={j}>{j}</td>
+                <td className={j.gray ? "k-calendar-gray" : ""} key={j.title}>
+                  {j.title}
+                </td>
               ))}
             </tr>
           ))}
