@@ -15,7 +15,7 @@ export const KSelectDoc: React.FC = () => {
   ];
   const [value, setValue] = useState<Props["value"]>("2");
   const handleClick: Props["handleClick"] = (e, value) => {
-    setValue(value);
+    setValue(value as string);
   };
   return (
     <>

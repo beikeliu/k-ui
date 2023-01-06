@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 export interface Day {
   value: number;
   gray?: boolean;
+  green?: boolean;
 }
 
 export const titles = ["一", "二", "三", "四", "五", "六", "日"];
@@ -14,6 +15,7 @@ export const getRenderItems = (day: dayjs.Dayjs = dayjs()): Day[][] => {
     .set("month", dayjs().month() || 12)
     .endOf("month")
     .date(); // 上月最后一天是几号
+  const currentDay = dayjs().date(); // 今天几号
   // push日历表
   const items: Day[] = [];
   for (let n = startWeek - 2; n >= 0; n--) {
@@ -23,7 +25,10 @@ export const getRenderItems = (day: dayjs.Dayjs = dayjs()): Day[][] => {
     });
   }
   for (let i = 1; i <= endDay; i++) {
-    items.push({ value: i });
+    items.push({
+      value: i,
+      green: day.month() === dayjs().month() && i === currentDay,
+    });
   }
   const len = items.length;
   for (let i = 1; i <= 6 * 7 - len; i++) {

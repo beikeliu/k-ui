@@ -5,7 +5,7 @@ export interface Props {
   day?: dayjs.Dayjs;
 }
 export const KCalendar: React.FC<Props> = (props: Props) => {
-  const renderItems = getRenderItems();
+  const renderItems = getRenderItems(props.day);
   return (
     <>
       <table className="k-calendar">
@@ -21,7 +21,9 @@ export const KCalendar: React.FC<Props> = (props: Props) => {
             <tr key={i[0].value + (i[0].gray ? 100 : 0)}>
               {i.map((j) => (
                 <td
-                  className={j.gray ? "k-calendar-gray" : ""}
+                  className={`${j.gray ? "k-calendar-gray" : ""} ${
+                    j.green ? "k-calendar-green" : ""
+                  }`}
                   key={j.value + (j.gray ? 100 : 0)}
                 >
                   {j.value}

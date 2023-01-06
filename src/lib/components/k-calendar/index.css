@@ -16,3 +16,7 @@ td {
 .k-calendar .k-calendar-gray {
   color: gray;
 }
+
+.k-calendar .k-calendar-green {
+  background-color: green;
+}

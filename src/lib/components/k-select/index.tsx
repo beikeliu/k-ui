@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import "./index.css";
 
 export interface Props {
-  value: string;
+  value: string | number;
   handleClick: (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    value: string
+    value: string | number
   ) => void;
   options: Array<{
     label: string;
-    value: string;
+    value: string | number;
   }>;
 }
 
