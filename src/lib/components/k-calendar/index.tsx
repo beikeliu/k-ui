@@ -1,18 +1,17 @@
 import "./index.css";
-import { Calendar } from "./Calendar";
+import { titles, getRenderItems } from "./utils";
 import * as dayjs from "dayjs";
 export interface Props {
   day?: dayjs.Dayjs;
 }
 export const KCalendar: React.FC<Props> = (props: Props) => {
-  const calendar = new Calendar(props.day);
-  const renderItems = calendar.getRenderItems();
+  const renderItems = getRenderItems();
   return (
     <>
       <table className="k-calendar">
         <thead>
           <tr>
-            {Calendar.titles.map((t) => (
+            {titles.map((t) => (
               <th key={t}>{t}</th>
             ))}
           </tr>
