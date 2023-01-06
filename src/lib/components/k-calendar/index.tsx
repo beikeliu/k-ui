@@ -6,8 +6,7 @@ export interface Props {
 }
 export const KCalendar: React.FC<Props> = (props: Props) => {
   const calendar = new Calendar(props.day);
-  const items = calendar.getItems();
-  console.log(items);
+  const renderItems = calendar.getRenderItems();
   return (
     <>
       <table className="k-calendar">
@@ -19,11 +18,14 @@ export const KCalendar: React.FC<Props> = (props: Props) => {
           </tr>
         </thead>
         <tbody>
-          {items.map((i) => (
-            <tr key={i[0].key}>
+          {renderItems.map((i) => (
+            <tr key={i[0].value + (i[0].gray ? 100 : 0)}>
               {i.map((j) => (
-                <td className={j.gray ? "k-calendar-gray" : ""} key={j.title}>
-                  {j.title}
+                <td
+                  className={j.gray ? "k-calendar-gray" : ""}
+                  key={j.value + (j.gray ? 100 : 0)}
+                >
+                  {j.value}
                 </td>
               ))}
             </tr>
