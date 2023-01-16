@@ -17,3 +17,31 @@
 .k-button:active {
   background: var(--active);
 }
+
+.k-button.k-button-danger {
+  background: var(--error);
+}
+
+.k-button.k-button-danger:hover {
+  background: var(--error-hover);
+}
+
+.k-button.k-button-cool {
+  background: white;
+  color: black;
+  border: 1px solid var(--side);
+}
+
+.k-button.k-button-cool:hover {
+  border: 1px solid var(--main);
+  color: var(--main);
+}
+
+.k-button.k-button-link {
+  background: transparent;
+  color: var(--link);
+}
+
+.k-button.k-button-link:hover {
+  color: var(--link-hover);
+}

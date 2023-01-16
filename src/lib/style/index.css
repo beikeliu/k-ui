@@ -9,6 +9,8 @@
 :root {
   --main: #0075ff;
   --hover: #005cc8;
+  --error-hover: #f5222d;
+  --link-hover: #0958d9;
   --active: #3793ff;
   --side: #d9d9d9;
   --prompt: #bfbfbf;

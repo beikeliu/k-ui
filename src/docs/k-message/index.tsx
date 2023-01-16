@@ -13,9 +13,13 @@ export const KMessageDoc: React.FC = () => {
   };
   return (
     <>
-      <KButton onClick={openSuccess}>success</KButton>
+      <KButton type="cool" onClick={openSuccess}>
+        success
+      </KButton>
       &nbsp;
-      <KButton onClick={openError}>error</KButton>
+      <KButton type="danger" onClick={openError}>
+        error
+      </KButton>
       &nbsp;
       <KButton onClick={openWarning}>warning</KButton>
     </>
